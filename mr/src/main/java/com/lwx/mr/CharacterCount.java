@@ -1,8 +1,8 @@
 package com.lwx.mr;
 
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.hdfs.util.EnumCounters;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -11,88 +11,81 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.yarn.webapp.hamlet.Hamlet;
 
 import java.io.IOException;
-import java.sql.SQLOutput;
 
-public class WordCount {
+public class CharacterCount {
 
+    public static class SplitMapper extends Mapper<LongWritable, Text,Text, IntWritable>{
 
-    public static class SplitMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
-        Text k = new Text();
-        IntWritable v = new IntWritable(1);
+        IntWritable v=new IntWritable(1);
+        Text k=new Text();
+
 
         @Override
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+            String str = value.toString();
+            char[] chars = str.toCharArray();
 
-            //获取一行
-            String line = value.toString();
+            for(char c:chars){
 
-            System.out.println(line);
+                if(!Character.isWhitespace(c)){
+                    String cs = String.valueOf(c);
+                    k.set(cs);
+                    context.write(k,v);
+                }
 
-            //切割
-            String[] words = line.split(" ");
-            System.out.println(words.length);
-
-            //输出
-            for (String word : words) {
-                k.set(word);
-                context.write(k, v);
             }
 
         }
     }
 
 
-    public static class SumReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
+    public static class SumReducer extends Reducer<Text,IntWritable,Text,IntWritable>{
 
-        IntWritable v = new IntWritable();
+        IntWritable v=new IntWritable();
 
         @Override
         protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
 
             int sum=0;
-            //计数
-            for (IntWritable count : values) {
-                sum += count.get();
-                System.out.println(key.toString()+":"+sum);
+            for(IntWritable count :values){
+                sum+=count.get();
+
             }
-
-
             v.set(sum);
-            context.write(key, v);
+            context.write(key,v);
         }
     }
 
-
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
-        //1获取配置信息及封装任务
-        Configuration configuration = new Configuration();
-        Job job = Job.getInstance(configuration);
-        //2设置jar加载路径
-        job.setJarByClass(WordCount.class);
-        //3设置map和reduce类
+
+
+        Configuration configuration=new Configuration();
+        Job job=Job.getInstance(configuration);
+
+        job.setJarByClass(CharacterCount.class);
+
         job.setMapperClass(SplitMapper.class);
         job.setReducerClass(SumReducer.class);
-        //4设置map输出
+
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(IntWritable.class);
-        //5设置最终k v输出类型
+
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
 
 
-        //6设置输入和输出路径
-
         FileInputFormat.setInputPaths(job,new Path(args[0]));
-        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+        FileOutputFormat.setOutputPath(job,new Path(args[1]));
 
-        //7提交
+
         boolean result = job.waitForCompletion(true);
 
-        System.exit(result ? 0 : 1);
+
+        System.exit(result?0:1);
 
     }
-
 
 }
