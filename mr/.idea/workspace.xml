@@ -6,7 +6,26 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c949201-1831-48bf-b9bf-477846204990" name="Default Changelist" comment="" />
+    <list default="true" id="2c949201-1831-48bf-b9bf-477846204990" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lwx/domain/Score.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lwx/domain/Version.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lwx/mr/CommonFriends1MR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lwx/mr/CommonFriends2MR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lwx/mr/CourseScoreMR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lwx/mr/CourseScoreMR2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lwx/mr/CourseScoreMR3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lwx/mr/CourseScoreMR4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lwx/mr/DistinctWordMR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lwx/mr/FansMR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lwx/mr/NLMR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lwx/mr/VersionMR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lwx/partition/CoursePartition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output/.part-r-00000.crc" beforeDir="false" afterPath="$PROJECT_DIR$/../output/.part-r-00000.crc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output/part-r-00000" beforeDir="false" afterPath="$PROJECT_DIR$/../output/part-r-00000" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +39,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -28,7 +50,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1UlsghLQJRhROV7FXGxZDLPDRYv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -55,11 +79,52 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CharacterCount">
-    <configuration name="CharacterCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lwx.mr.CharacterCount" />
+  <component name="RunManager" selected="Application.CourseScoreMR4">
+    <configuration name="CourseScoreMR" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lwx.mr.CourseScoreMR" />
       <module name="mr" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;input&quot; &quot;output&quot;" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lwx.mr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseScoreMR2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lwx.mr.CourseScoreMR2" />
+      <module name="mr" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lwx.mr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseScoreMR3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lwx.mr.CourseScoreMR3" />
+      <module name="mr" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lwx.mr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseScoreMR4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lwx.mr.CourseScoreMR4" />
+      <module name="mr" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
       <extension name="coverage">
         <pattern>
@@ -74,7 +139,7 @@
     <configuration name="WordCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.lwx.mr.WordCount" />
       <module name="mr" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;input&quot; &quot;output&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;input&quot; &quot;wcoutput&quot;" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
       <extension name="coverage">
         <pattern>
@@ -93,13 +158,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.CourseScoreMR" />
+      <item itemvalue="Application.CourseScoreMR2" />
+      <item itemvalue="Application.CourseScoreMR3" />
       <item itemvalue="Application.WordCount" />
-      <item itemvalue="Application.CharacterCount" />
+      <item itemvalue="Application.CourseScoreMR4" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CharacterCount" />
+        <item itemvalue="Application.CourseScoreMR4" />
         <item itemvalue="Application.WordCount" />
+        <item itemvalue="Application.CourseScoreMR3" />
+        <item itemvalue="Application.CourseScoreMR2" />
+        <item itemvalue="Application.CourseScoreMR" />
       </list>
     </recent_temporary>
   </component>
@@ -114,11 +185,38 @@
       <option name="presentableId" value="Default" />
       <updated>1575942628861</updated>
       <workItem from="1575942632852" duration="3848000" />
-      <workItem from="1575946902157" duration="9308000" />
+      <workItem from="1575946902157" duration="10186000" />
+      <workItem from="1576027546003" duration="8680000" />
+      <workItem from="1576110767614" duration="6650000" />
+      <workItem from="1576197597997" duration="6069000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lwx/mr/WordCount.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
